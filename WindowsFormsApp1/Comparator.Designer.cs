@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(comparator));
             this.insertionSortChosed = new System.Windows.Forms.CheckBox();
             this.bubbleSortChosed = new System.Windows.Forms.CheckBox();
@@ -38,7 +38,6 @@
             this.addElement = new System.Windows.Forms.Button();
             this.inputtedElement = new System.Windows.Forms.TextBox();
             this.dataList = new System.Windows.Forms.ListBox();
-            this.title = new System.Windows.Forms.Label();
             this.graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.sortMode = new System.Windows.Forms.CheckedListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,6 +45,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.graph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -108,31 +109,20 @@
             this.dataList.Size = new System.Drawing.Size(261, 134);
             this.dataList.TabIndex = 10;
             // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.title.Location = new System.Drawing.Point(187, 22);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(685, 55);
-            this.title.TabIndex = 0;
-            this.title.Text = "Sorting Algorithms Comparator";
-            // 
             // graph
             // 
-            chartArea2.Name = "ChartArea1";
-            this.graph.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graph.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.graph.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.graph.Legends.Add(legend3);
             this.graph.Location = new System.Drawing.Point(480, 100);
             this.graph.Name = "graph";
             this.graph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.graph.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.graph.Series.Add(series3);
             this.graph.Size = new System.Drawing.Size(462, 258);
             this.graph.TabIndex = 11;
             this.graph.Text = "chart1";
@@ -153,7 +143,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(723, 413);
+            this.pictureBox1.Location = new System.Drawing.Point(728, 414);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(282, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,12 +181,36 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sorting Mode";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(354, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 35);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Cascadia Code", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.title.Location = new System.Drawing.Point(138, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(750, 57);
+            this.title.TabIndex = 0;
+            this.title.Text = "Sorting Algorithms Comparator";
+            // 
             // comparator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1008, 474);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.graph);
             this.Controls.Add(this.inputtedElement);
@@ -212,7 +226,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "comparator";
-            this.Text = "Algorithms Comparator - Gog Andrei && Batin Ana Maria";
+            this.Text = "Sorting Algorithms Comparator";
             ((System.ComponentModel.ISupportInitialize)(this.graph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -231,7 +245,6 @@
         private System.Windows.Forms.Button addElement;
         private System.Windows.Forms.TextBox inputtedElement;
         private System.Windows.Forms.ListBox dataList;
-        private System.Windows.Forms.Label title;
         private System.Windows.Forms.DataVisualization.Charting.Chart graph;
         private System.Windows.Forms.CheckedListBox sortMode;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -239,6 +252,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label title;
     }
 }
 

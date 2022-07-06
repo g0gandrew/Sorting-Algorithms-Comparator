@@ -129,5 +129,10 @@ namespace WindowsFormsApp1
             this.insertionSort.setData(extractElements());
             this.insertionSort.sort(this.sortingMode);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.dataList.Items.Clear();
+        }
     }
 }
